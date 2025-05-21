@@ -1,12 +1,17 @@
-from .Head import *
+from utils import *
+from .eyes import *
+from .eyelids import *
+from .eyebrows import *
+from .mouth import *
+from .neck import *
 
 class Head:
     def __init__(self):
-        self.eyes = Eyes()
-        self.eyelids = Eyelids()
-        self.eyebrows = Eyebrows()
-        self.mouth = Mouth()
-        self.neck = Neck()
+        self.eyes = safe_init(Eyes, "Eyes")
+        self.eyelids = safe_init(Eyelids, "Eyelids")
+        self.eyebrows = safe_init(Eyebrows, "Eyebrows")
+        self.mouth = safe_init(Mouth, "Mouth")
+        self.neck = safe_init(Neck, "Neck")
 
     def loadVar(self):
         return self.eyes, self.eyelids, self.eyebrows, self.mouth, self.neck

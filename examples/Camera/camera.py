@@ -16,9 +16,6 @@ try:
         # Capture frame
         frame = picam2.capture_array()
 
-        # Convert the frame to a format OpenCV can use (BGR)
-        #frame_bgr = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-
         # Display the frame
         cv2.imshow("IMX708 Feed", frame)
 

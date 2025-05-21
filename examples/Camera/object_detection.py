@@ -17,7 +17,7 @@ with open("./coral-models/coco_labels.txt", 'r') as f:
 
 # Initialize Picamera2
 picam2 = Picamera2()
-picam2.preview_configuration.main.size = (1280, 480)
+picam2.preview_configuration.main.size = (int(1000), int(600))
 picam2.preview_configuration.main.format = "RGB888"
 picam2.configure("preview")
 picam2.start()
